@@ -1,0 +1,8 @@
+
+h1 {font-size: $fontSize * 5;@include pur(--)}
+h2 {font-size: $fontSize * 4;@include pur(--)}
+h3 {font-size: $fontSize * 3;@include pur(--)}
+h4 {font-size: $fontSize * 2;@include pur(--)}
+h5 {font-size: $fontSize * 1.5;@include pur(--)}
+
+

@@ -60,6 +60,7 @@
     font-size: $fontSize;
     font-weight: $fontWeight;
     font-family: $fontFamily;
+    @content;
 }
 
 
@@ -83,6 +84,15 @@ section {
   }
 }
 
+/// 偽元素
+@mixin pur($content){
+   &::before{
+    content: '#{$content}';
+   };
+   &::after{
+     content: '#{$content}';
+   };
+}
 
 
 
