@@ -84,29 +84,6 @@ section {
 }
 
 
-@include layout(1200);
-
-@include m(){
-    @include layout(100);
-}
-
-@include t(){
-    @include layout(80);
-}
-
-
-h1 {
-  font-size: 46px;
-  @include m(){
-    font-size: 32px;
-  }
-  @include t(){
-     font-size: 60px;
-  }
-
-
-}
-
 
 
 
