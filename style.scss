@@ -3,17 +3,114 @@
 $fontSize : 18px; //變數數值
 $fontFamily: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; //字串
 $fontColor : #333; // color 顏色
+$spacingM : 10px 20px 10px; // list
+$color: (
+    key : value,
+    blue : #0059ff,
+    red : #ff2a00,
+);
+
+
+$breakpoint : (mobile : 556px,
+    tablet : 998px,
+
+); //map
+
 
 body {
     padding: 0;
-    margin: 20px;
-    color : $fontColor;
+    margin: $spacingM;
+    color: $fontColor;
     font-size: $fontSize;
     font-family: $fontFamily;
+    background-color: map-get($color, red);
 }
 
 p {
- font-size: 16px;
- font-family: $fontFamily;
+    font-size: 16px;
+    font-family: $fontFamily;
 }
 
+
+@media screen and (max-width : map-get($breakpoint , tablet)) {
+    body {
+        background-color: #333;
+
+    }
+}
+
+$full : true; //布林值
+
+body {
+    @if $full {
+        width: 100%;
+    }
+
+    @else {
+        width: 1200px;
+        margin: auto;
+    }
+}
+
+$a : null; //空值
+
+.adf {
+    font-size: $a;
+    color: #333;
+}
+
+
+p {
+    $b : 10px !global; //區域變數
+    $fontSize : 22px;
+    font-size: $fontSize;
+}
+
+
+span {
+     font-size: $b;
+
+}
+
+
+$c : 20px;
+$c : 30px !default;
+
+.a {
+   font-size: $c;
+}
+
+$class : fixed;
+
+.container-#{$class} {
+    width: 100%;
+} 
+
+
+$title : (
+  h1 : 60px,
+  h2 : 45px,
+  h3 : 36px,
+  div : 18px,
+  'span' : 12px,
+  '.wrapper' : 14px 
+);
+
+$btnColor : (
+  primary : #ffe600,
+  secondary : #ff9500,
+  error : #f20,
+);
+
+
+@each $k ,  $v in $title {
+   #{$k} {
+      font-size: $v;
+   }
+}
+
+@each $k , $v in  $btnColor {
+   .btn-#{$k} {
+      background-color: $v;
+   }
+}
