@@ -16,17 +16,31 @@ section {
   margin: auto;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 720px) {
   .wrapper {
     width: 100%;
   }
 }
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 11199px) {
   .wrapper {
     width: 80%;
     margin: auto;
   }
 }
+h1 {
+  font-size: 46px;
+}
+@media screen and (max-width: 720px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 11199px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
 header {
   display: flex;
   align-items: center;
