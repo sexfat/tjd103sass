@@ -3,13 +3,19 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: #e2e2e2;
+    padding: 0 10px;
     .logo {
             @include rects(114 , 48 , false);
             font-size: 40px;
             color: #000;
+            @include m(){
+                margin: auto;
+            }
         }
     nav {
-        
+    @include m(){
+        display: none;
+    }        
         ul {
             list-style: none;
             display: flex;
