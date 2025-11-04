@@ -1,7 +1,30 @@
 // @import url(); css寫法
 //sass import
+// base
+@import 'base/var';
+@import 'base/font';
+@import 'base/color';
 
-@import 'var';
+// mixin
+@import 'mixins/mixin';
+
+// component
+@import 'component/btn';
+@import 'component/card';
+@import 'component/rwd';
+@import 'component/table';
+
+//layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/nav';
+
+//page
+@import 'page/index';
+@import 'page/about';
+
+//套件
+@import 'plugin/all';
 
 
 body {
