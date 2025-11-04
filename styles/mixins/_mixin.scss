@@ -1,0 +1,29 @@
+//宣告
+@mixin rect {
+    width: 100px;
+    height: 100px;
+}
+
+//使用
+.a {
+    position: relative;
+    left: 20px;
+    @include rect;
+}
+
+.b {
+    position: relative;
+    right: 30px;
+    @include rect;
+}
+
+
+@mixin rects($w:100% , $h:$w) {
+    width: $w;
+    height: $h;
+}
+
+//使用
+.c {
+    @include rects(1200px , 800px);
+}
