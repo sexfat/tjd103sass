@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 10px 20px 10px;
   color: #333;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: #ff2a00;
 }
@@ -76,6 +76,29 @@ span {
 
 .btn-error {
   background-color: #f20;
+}
+
+.container {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header ul {
+  list-style: none;
+  display: flex;
+}
+header ul li {
+  max-width: 120px;
+}
+header ul li::before {
+  content: "";
+}
+header ul li:hover {
+  background-color: #fa6666;
 }
 
 /*# sourceMappingURL=style.css.map */

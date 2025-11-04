@@ -1,0 +1,133 @@
+// @import url(); css寫法
+//sass import
+
+@import 'var';
+
+
+body {
+    padding: 0;
+    margin: $spacingM;
+    color: $fontColor;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    background-color: map-get($color, red);
+}
+
+p {
+    font-size: 16px;
+    font-family: $fontFamily;
+}
+
+
+@media screen and (max-width : map-get($breakpoint , tablet)) {
+    body {
+        background-color: #333;
+
+    }
+}
+
+$full : true; //布林值
+
+body {
+    @if $full {
+        width: 100%;
+    }
+
+    @else {
+        width: 1200px;
+        margin: auto;
+    }
+}
+
+$a : null; //空值
+
+.adf {
+    font-size: $a;
+    color: #333;
+}
+
+
+p {
+    $b : 10px !global; //區域變數
+    $fontSize : 22px;
+    font-size: $fontSize;
+}
+
+
+span {
+    font-size: $b;
+
+}
+
+
+$c : 20px;
+$c : 30px !default;
+
+.a {
+    font-size: $c;
+}
+
+$class : fixed;
+
+.container-#{$class} {
+    width: 100%;
+}
+
+
+$title : (h1 : 60px,
+    h2 : 45px,
+    h3 : 36px,
+    div : 18px,
+    'span' : 12px,
+    '.wrapper' : 14px);
+
+$btnColor : (primary : #ffe600,
+    secondary : #ff9500,
+    error : #f20,
+);
+
+
+@each $k , $v in $title {
+    #{$k} {
+        font-size: $v;
+    }
+}
+
+@each $k , $v in $btnColor {
+    .btn-#{$k} {
+        background-color: $v;
+    }
+}
+
+// 
+
+.container {
+    width: 100%;
+
+
+
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+        list-style: none;
+        display: flex;
+
+        li {
+            max-width: 120px;
+
+            &::before {
+                content: '';
+            }
+
+            &:hover {
+                background-color: #fa6666;
+            }
+        }
+    }
+}
