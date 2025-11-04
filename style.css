@@ -1,23 +1,32 @@
 /*sass var*/
-.a {
-  position: relative;
-  left: 20px;
-  width: 100px;
-  height: 100px;
-}
-
-.b {
-  position: relative;
-  right: 30px;
-  width: 100px;
-  height: 100px;
-}
-
 .c {
   width: 1200px;
-  height: 800px;
+  height: 400px;
 }
 
+section {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Arial";
+  font-display: block;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: auto;
+}
+
+@media screen and (max-width: 560px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 996px) {
+  .wrapper {
+    width: 80%;
+    margin: auto;
+  }
+}
 header {
   display: flex;
   align-items: center;

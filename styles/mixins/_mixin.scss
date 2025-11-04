@@ -1,29 +1,104 @@
-//宣告
+//形狀
 @mixin rect {
     width: 100px;
     height: 100px;
 }
 
-//使用
-.a {
-    position: relative;
-    left: 20px;
-    @include rect;
-}
-
-.b {
-    position: relative;
-    right: 30px;
-    @include rect;
+@mixin borderR8 {
+    border-radius: 8px;
 }
 
 
-@mixin rects($w:100% , $h:$w) {
+
+@mixin rects($w: 100%, $h: $w , $boderRadius: null) {
     width: $w;
     height: $h;
+
+    @if $boderRadius {
+        @include borderR8;
+    }
 }
 
 //使用
 .c {
-    @include rects(1200px , 800px);
+    @include rects(1200px, 400px);
 }
+
+
+
+//layout 判斷式
+//===========================
+// 使用方式: @include layout(100) 滿版
+// layout (80) => 80%寬度
+// layout (1200) => 1200px 置中固定寬
+//===========================
+@mixin layout($w) {
+    @if $w ==100 {
+        .wrapper {
+            width: 100%;
+        }
+    }
+
+    @else if $w < 100 {
+        .wrapper {
+            width: $w * 1%;
+            margin: auto;
+        }
+    }
+
+    @else {
+        .wrapper {
+            width: $w + px;
+            margin: auto;
+        }
+
+    }
+}
+
+
+
+
+@mixin font($fontSize , $fontWeight , $fontFamily) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    font-family: $fontFamily;
+    @content;
+}
+
+
+//無聊寫法
+section {
+    @include font(20px, bold, 'Arial') {
+        font-display: block;
+    }
+}
+
+//rwd 寫法
+@mixin m(){
+  @media screen and (max-width: $breakpoint-m){
+    @content;
+  }
+}
+
+@mixin t(){
+  @media screen and (max-width: $breakpoint-t){
+    @content;
+  }
+}
+
+
+@include layout(1200);
+
+@include m(){
+    @include layout(100);
+}
+
+@include t(){
+    @include layout(80);
+}
+
+
+
+
+
+
