@@ -60,19 +60,23 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #e2e2e2;
 }
-header ul {
+header .logo {
+  width: 114;
+  height: 48;
+  font-size: 40px;
+  color: #000;
+}
+header nav ul {
   list-style: none;
   display: flex;
+  padding: 0;
+  margin: 0;
 }
-header ul li {
+header nav ul li {
   max-width: 120px;
-}
-header ul li::before {
-  content: "";
-}
-header ul li:hover {
-  background-color: #fa6666;
+  padding: 10px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
