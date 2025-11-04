@@ -4,12 +4,14 @@
     height: 100px;
 }
 
+// 圓角
 @mixin borderR8 {
     border-radius: 8px;
 }
 
 
 
+//形狀 + 圓角
 @mixin rects($w: 100%, $h: $w , $boderRadius: null) {
     width: $w;
     height: $h;
@@ -19,10 +21,6 @@
     }
 }
 
-//使用
-.c {
-    @include rects(1200px, 400px);
-}
 
 
 
@@ -62,7 +60,6 @@
     font-size: $fontSize;
     font-weight: $fontWeight;
     font-family: $fontFamily;
-    @content;
 }
 
 
