@@ -53,16 +53,16 @@
 // 迴圈
 @mixin pushblock($num) {
     @for $i from 1 through $num {
-        .push-top-#{$i} {
+        .pt-#{$i} {
             position: relative;
             top: $i + px
         }
-        .push-left-#{$i} {
+        .pl-#{$i} {
             position: relative;
             left: $i + px
         }
 
-        .push-right-#{$i} {
+        .pr-#{$i} {
             position: relative;
             right: $i + px
         }
