@@ -32,37 +32,56 @@
 //運算
 //注意單位 
 .s {
-  width:  10 + 10  + px ;
-  height:  20em - 1em ;
-  margin:  10 * 2px   ;
-  font: (100 / 20) + px; // 除法要()
-  padding: ceil(100 / 3) ;// 運算內建函式 ceil round floor
+    width: 10 + 10 + px;
+    height: 20em - 1em;
+    margin: 10 * 2px;
+    font: (100 / 20) + px; // 除法要()
+    padding: ceil(100 / 3); // 運算內建函式 ceil round floor
 
 }
 
 //內建函式
 //顏色內建函式
 .bgc {
-//    background-color: #fff;
-   background-color: darken(#fff , 100); //變暗
-   color : lighten(#000, 100)
+    //    background-color: #fff;
+    background-color: darken(#fff, 100); //變暗
+    color: lighten(#000, 100)
 }
 
 
 
 // 迴圈
-@for $i from 1 through 100  {
-   .push-left-#{$i} {
-      position: relative;
-      left : $i + px
-   }
-   .push-right-#{$i} {
-      position: relative;
-      right : $i + px
-   }
+@mixin pushblock($num) {
+    @for $i from 1 through $num {
+        .push-top-#{$i} {
+            position: relative;
+            top: $i + px
+        }
+        .push-left-#{$i} {
+            position: relative;
+            left: $i + px
+        }
+
+        .push-right-#{$i} {
+            position: relative;
+            right: $i + px
+        }
+    }
 }
 
 
+
+
+@include pushblock(200);
+
+
+
+.box {
+  @include rects(300px);
+  background-color: #f20;
+
+
+}
 
 
 
@@ -73,17 +92,3 @@
 
 
 //迴圈
-
-
-
-
-
-
-
-
-
-
-
-
-
-
