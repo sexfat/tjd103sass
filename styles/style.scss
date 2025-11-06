@@ -48,8 +48,6 @@
     color: lighten(#000, 100)
 }
 
-
-
 // 迴圈
 @mixin pushblock($num) {
     @for $i from 1 through $num {
@@ -57,6 +55,7 @@
             position: relative;
             top: $i + px
         }
+
         .pl-#{$i} {
             position: relative;
             left: $i + px
@@ -70,18 +69,74 @@
 }
 
 
+//第二種
+@mixin push($dir , $num) {
+    @for $i from 1 through $num {
+        .#{$dir}-#{$i} {
+            position: relative;
+            #{$dir}: $i + px
+        }
+    }
+}
 
+// @include push (left , 10);
+// @include push (right , 20);
+// @include push (top  , 50);
 
-@include pushblock(200);
-
+// @include pushblock(200);
 
 
 .box {
-  @include rects(300px);
-  background-color: #f20;
-
-
+    @include rects(300px);
+    background-color: #f20;
 }
+
+
+// each  迴圈
+
+
+
+.banner {
+    width: 100%;
+    height: 450px;
+}
+
+@mixin slider($img , $format:jpg) {
+    @each $i in $img {
+        .slider-#{$i} {
+            background-image: url('images/#{$i}.#{$format}');
+        }
+    }
+}
+
+@include slider(1 2 3 4 5 , png);
+
+
+//each map
+
+$headtag:(
+   h1 : 50px,
+   h2 : 40px,
+   h3 : 30px,
+   h4 : 20px,
+   body : 16px,
+   span : 12px,
+   '.desc' : 10px,
+);
+
+@each $i , $j in $headtag {
+   #{$i} {
+      font-size: $j;
+   }
+}
+ 
+
+
+
+
+
+
+
 
 
 
