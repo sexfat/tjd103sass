@@ -61,6 +61,37 @@ section {
   font-display: block;
 }
 
+.btn-primary {
+  padding: 12px 20px;
+  width: 140px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #5000c8;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: rgb(39.2, 0, 98);
+}
+
+.btn-secondary {
+  padding: 12px 20px;
+  width: 140px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #f25416;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.btn-secondary:hover {
+  background-color: rgb(153.4390243902, 49.3902439024, 8.5609756098);
+}
+
 h1 {
   font-size: 80px;
 }
@@ -355,37 +386,6 @@ span {
 
 .warning-7 {
   background-color: rgb(255, 210.4997520661, 123.67);
-}
-
-.btn-primary {
-  padding: 12px 20px;
-  width: 140px;
-  text-align: center;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  background-color: #5000c8;
-  transition: all 0.1s ease;
-  cursor: pointer;
-}
-.btn-primary:hover {
-  background-color: rgb(39.2, 0, 98);
-}
-
-.btn-secondary {
-  padding: 12px 20px;
-  width: 140px;
-  text-align: center;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  background-color: #f25416;
-  transition: all 0.1s ease;
-  cursor: pointer;
-  border-radius: 20px;
-}
-.btn-secondary:hover {
-  background-color: rgb(153.4390243902, 49.3902439024, 8.5609756098);
 }
 
 /*# sourceMappingURL=style.css.map */
