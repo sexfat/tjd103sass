@@ -101,7 +101,7 @@
     height: 450px;
 }
 
-@mixin slider($img , $format:jpg) {
+@mixin slider($img , $format: jpg) {
     @each $i in $img {
         .slider-#{$i} {
             background-image: url('images/#{$i}.#{$format}');
@@ -109,27 +109,49 @@
     }
 }
 
-@include slider(1 2 3 4 5 , png);
+@include slider(1 2 3 4 5, png);
 
 
 //each map
 
-$headtag:(
-   h1 : 50px,
-   h2 : 40px,
-   h3 : 30px,
-   h4 : 20px,
-   body : 16px,
-   span : 12px,
-   '.desc' : 10px,
+$headtag: (
+    h1 : 50px,
+    h2 : 40px,
+    h3 : 30px,
+    h4 : 20px,
+    body : 16px,
+    span : 12px,
+    '.desc' : 10px,
 );
 
 @each $i , $j in $headtag {
-   #{$i} {
-      font-size: $j;
-   }
+    #{$i} {
+        font-size: $j;
+    }
 }
- 
+
+$bgc :(black : #000,
+    primary : #06bcc5,
+    auxiliary : #FF8156,
+    danger :#EC2D30,
+    warning : #FFAD0D);
+
+@mixin bgc($bgc) {
+    @each $i , $j in $bgc {
+        @for $c from 1 through 7 {
+            .#{$i}-#{$c} {
+                background-color: lighten($j , $c * 3.1);
+                width: 100%;
+                height: 45px;
+            }
+        }
+    }
+}
+
+@include bgc($bgc);
+
+
+
 
 
 
