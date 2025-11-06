@@ -1,4 +1,9 @@
 /*sass var*/
+section {
+  width: 100vw;
+  height: 450px;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -214,212 +219,173 @@ span {
 
 .black-1 {
   background-color: rgb(7.905, 7.905, 7.905);
-  width: 100%;
-  height: 45px;
 }
 
 .black-2 {
   background-color: rgb(15.81, 15.81, 15.81);
-  width: 100%;
-  height: 45px;
 }
 
 .black-3 {
   background-color: rgb(23.715, 23.715, 23.715);
-  width: 100%;
-  height: 45px;
 }
 
 .black-4 {
   background-color: rgb(31.62, 31.62, 31.62);
-  width: 100%;
-  height: 45px;
 }
 
 .black-5 {
   background-color: rgb(39.525, 39.525, 39.525);
-  width: 100%;
-  height: 45px;
 }
 
 .black-6 {
   background-color: rgb(47.43, 47.43, 47.43);
-  width: 100%;
-  height: 45px;
 }
 
 .black-7 {
   background-color: rgb(55.335, 55.335, 55.335);
-  width: 100%;
-  height: 45px;
 }
 
 .primary-1 {
   background-color: rgb(6.4672906404, 202.641773399, 212.3427093596);
-  width: 100%;
-  height: 45px;
 }
 
 .primary-2 {
   background-color: rgb(6.9345812808, 217.283546798, 227.6854187192);
-  width: 100%;
-  height: 45px;
 }
 
 .primary-3 {
   background-color: rgb(7.4018719212, 231.925320197, 243.0281280788);
-  width: 100%;
-  height: 45px;
 }
 
 .primary-4 {
   background-color: rgb(18.444729064, 236.9881773399, 247.795270936);
-  width: 100%;
-  height: 45px;
 }
 
 .primary-5 {
   background-color: rgb(33.7874384236, 238.1564039409, 248.2625615764);
-  width: 100%;
-  height: 45px;
 }
 
 .primary-6 {
   background-color: rgb(49.1301477833, 239.3246305419, 248.7298522167);
-  width: 100%;
-  height: 45px;
 }
 
 .primary-7 {
   background-color: rgb(64.4728571429, 240.4928571429, 249.1971428571);
-  width: 100%;
-  height: 45px;
 }
 
 .auxiliary-1 {
   background-color: rgb(255, 140.7873372781, 101.81);
-  width: 100%;
-  height: 45px;
 }
 
 .auxiliary-2 {
   background-color: rgb(255, 152.5746745562, 117.62);
-  width: 100%;
-  height: 45px;
 }
 
 .auxiliary-3 {
   background-color: rgb(255, 164.3620118343, 133.43);
-  width: 100%;
-  height: 45px;
 }
 
 .auxiliary-4 {
   background-color: rgb(255, 176.1493491124, 149.24);
-  width: 100%;
-  height: 45px;
 }
 
 .auxiliary-5 {
   background-color: rgb(255, 187.9366863905, 165.05);
-  width: 100%;
-  height: 45px;
 }
 
 .auxiliary-6 {
   background-color: rgb(255, 199.7240236686, 180.86);
-  width: 100%;
-  height: 45px;
 }
 
 .auxiliary-7 {
   background-color: rgb(255, 211.5113609467, 196.67);
-  width: 100%;
-  height: 45px;
 }
 
 .danger-1 {
   background-color: rgb(237.3117467249, 59.4982532751, 62.2911353712);
-  width: 100%;
-  height: 45px;
 }
 
 .danger-2 {
   background-color: rgb(238.6234934498, 73.9965065502, 76.5822707424);
-  width: 100%;
-  height: 45px;
 }
 
 .danger-3 {
   background-color: rgb(239.9352401747, 88.4947598253, 90.8734061135);
-  width: 100%;
-  height: 45px;
 }
 
 .danger-4 {
   background-color: rgb(241.2469868996, 102.9930131004, 105.1645414847);
-  width: 100%;
-  height: 45px;
 }
 
 .danger-5 {
   background-color: rgb(242.5587336245, 117.4912663755, 119.4556768559);
-  width: 100%;
-  height: 45px;
 }
 
 .danger-6 {
   background-color: rgb(243.8704803493, 131.9895196507, 133.7468122271);
-  width: 100%;
-  height: 45px;
 }
 
 .danger-7 {
   background-color: rgb(245.1822270742, 146.4877729258, 148.0379475983);
-  width: 100%;
-  height: 45px;
 }
 
 .warning-1 {
   background-color: rgb(255, 178.357107438, 28.81);
-  width: 100%;
-  height: 45px;
 }
 
 .warning-2 {
   background-color: rgb(255, 183.714214876, 44.62);
-  width: 100%;
-  height: 45px;
 }
 
 .warning-3 {
   background-color: rgb(255, 189.071322314, 60.43);
-  width: 100%;
-  height: 45px;
 }
 
 .warning-4 {
   background-color: rgb(255, 194.4284297521, 76.24);
-  width: 100%;
-  height: 45px;
 }
 
 .warning-5 {
   background-color: rgb(255, 199.7855371901, 92.05);
-  width: 100%;
-  height: 45px;
 }
 
 .warning-6 {
   background-color: rgb(255, 205.1426446281, 107.86);
-  width: 100%;
-  height: 45px;
 }
 
 .warning-7 {
   background-color: rgb(255, 210.4997520661, 123.67);
-  width: 100%;
-  height: 45px;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  width: 140px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #5000c8;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: rgb(39.2, 0, 98);
+}
+
+.btn-secondary {
+  padding: 12px 20px;
+  width: 140px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #f25416;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.btn-secondary:hover {
+  background-color: rgb(153.4390243902, 49.3902439024, 8.5609756098);
 }
 
 /*# sourceMappingURL=style.css.map */

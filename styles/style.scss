@@ -141,14 +141,43 @@ $bgc :(black : #000,
         @for $c from 1 through 7 {
             .#{$i}-#{$c} {
                 background-color: lighten($j , $c * 3.1);
-                width: 100%;
-                height: 45px;
+                // width: 100%;
+                // height: 45px;
             }
         }
     }
 }
 
 @include bgc($bgc);
+
+
+@mixin btn($class, $bgc , $borderR:null){
+   .btn-#{$class} {
+     padding: 12px 20px;
+     width: 140px;
+     text-align: center;
+     color: #fff;
+     font-size: 14px;
+     font-weight: 400;
+     background-color: $bgc;
+     transition: all .1s ease;
+     cursor: pointer;
+     border-radius: $borderR ;
+      &:hover {
+        background-color:  darken($bgc , 20);
+      }
+    //   border: ;
+    //   border-radius: ;
+   } 
+}
+
+@include btn('primary' , #5000c8 );
+@include btn('secondary' , #f25416, 20px );
+
+
+
+
+
 
 
 
